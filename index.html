@@ -1,0 +1,153 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Download TikTok videos without watermark instantly. Just paste the link and download!" />
+  <meta name="keywords" content="TikTok downloader, No watermark, Download TikTok video, TikTok video saver" />
+  <meta name="author" content="Nowatermarktok.com" />
+  <title>NoWatermarkTok - TikTok Video Downloader</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .container {
+      margin-top: 2rem;
+      width: 95%;
+      max-width: 500px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .paste-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .clear-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .download-btn {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      margin-top: 15px;
+    }
+
+    .ad-section {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Nowatermarktok.com</header>
+
+  <div class="container">
+    <input type="text" id="videoLink" placeholder="Paste your TikTok video link here…" />
+    
+    <div class="buttons">
+      <button class="paste-btn" onclick="pasteLink()">Paste</button>
+      <button class="clear-btn" onclick="clearInput()">Clear</button>
+    </div>
+
+    <button class="download-btn" onclick="downloadVideo()">Download</button>
+
+    <!-- 🔶 Native Banner Ad -->
+    <div class="ad-section">
+      <script async="async" data-cfasync="false" src="//pl26836492.profitableratecpm.com/1a803ec3c6fa43de25af5fddd270cd5c/invoke.js"></script>
+      <div id="container-1a803ec3c6fa43de25af5fddd270cd5c"></div>
+    </div>
+    
+    <!-- 🔶 Social Bar Ad -->
+    <div class="ad-section">
+      <script type='text/javascript' src='//pl26836480.profitableratecpm.com/6b/45/52/6b4552187a53000760ebe6e047cd910d.js'></script>
+    </div>
+
+    <!-- 🔶 Extra Banner or Bottom Ad -->
+    <div class="ad-section">
+      <script type='text/javascript' src='//pl26836470.profitableratecpm.com/23/16/7d/23167d5396deb2878b94869aefc538a5.js'></script>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Nowatermarktok.com — All rights reserved.
+  </footer>
+
+  <script>
+    function pasteLink() {
+      navigator.clipboard.readText().then(text => {
+        document.getElementById("videoLink").value = text;
+      }).catch(err => {
+        alert("Failed to paste. Please paste manually.");
+      });
+    }
+
+    function clearInput() {
+      document.getElementById("videoLink").value = "";
+    }
+
+    function downloadVideo() {
+      const link = document.getElementById("videoLink").value.trim();
+      if (!link) {
+        alert("Please paste a valid TikTok video link.");
+        return;
+      }
+      // Replace with your backend API or 3rd party API redirect
+      window.open(`https://api.tikmate.app/api/download?url=${encodeURIComponent(link)}`, '_blank');
+    }
+  </script>
+
+</body>
+</html
